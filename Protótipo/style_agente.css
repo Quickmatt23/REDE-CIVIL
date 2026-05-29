@@ -1,0 +1,391 @@
+/* =====================================================
+                 VARIÁVEIS DE TEMA
+===================================================== */
+:root {
+  --bg: #1e1e1e;
+  --bg2: #2a2a2a;
+  --text: #e0e0e0;
+  --card: #242424;
+  --accent: #e75220;
+}
+
+.light {
+  --bg: #f4f4f4;
+  --bg2: #ffffff;
+  --text: #222;
+  --card: #eaeaea;
+}
+
+/* Ícones modo claro */
+.light .icon-menu,
+.light .img-seta { filter: invert(1); }
+.light .icon-config-titulo
+
+/* Ícones da aba Config */
+.icon-config-titulo {
+  width: 28px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.light .icon-config-tema,
+.light .icon-config-usuario,
+.light .icon-config-sistema {
+  filter: invert(1);
+}
+
+/* =====================================================
+                        GLOBAL
+===================================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+body { background: var(--bg); color: var(--text); height: 100vh; display: flex; overflow: hidden; }
+
+/* Scroll elegante */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #555; border-radius: 6px; }
+
+/* =====================================================
+                        SIDEBAR
+===================================================== */
+.sidebar {
+  width: 220px; background: var(--bg2); display: flex; flex-direction: column;
+  transition: width 0.3s ease; height: 100vh; position: fixed;
+}
+.sidebar.collapsed { width: 70px; }
+
+.logo { display: flex; justify-content: center; padding: 20px 0; }
+.logo-img { width: 50px; }
+
+.menu-lateral { flex: 1; padding: 20px 10px; }
+.menu-lateral ul { list-style: none; }
+.menu-lateral ul li { margin-bottom: 12px; }
+.menu-lateral ul li:last-child { margin-top: auto; border-top: 1px solid #444; padding-top: 15px; margin-bottom: 60px; }
+
+.menu-lateral a {
+  display: flex; align-items: center; gap: 10px; padding: 12px 15px; border-radius: 6px;
+  color: var(--text); text-decoration: none; transition: 0.3s;
+}
+.menu-lateral a:hover, .menu-lateral a.ativo { background: var(--accent); color: #fff; }
+.icon-menu { width: 22px; height: 22px; }
+.sidebar.collapsed a span { display: none; }
+.sidebar.collapsed .menu-lateral a { justify-content: center; padding: 12px 0; }
+.btn-toggle { position: sticky; top: 430px; margin-top: auto; background: transparent; border: none; }
+.img-seta { width: 28px; transition: 0.3s; }
+.sidebar.collapsed .img-seta { transform: rotate(180deg); }
+
+/* =====================================================
+                        MAIN CONTENT
+===================================================== */
+.main-content {
+  flex: 1; margin-left: 220px; height: 100vh; overflow-y: auto; transition: margin-left 0.3s;
+}
+.sidebar.collapsed ~ .main-content { margin-left: 70px; }
+
+.topbar {
+  background: var(--bg2); padding: 15px 25px; display: flex; justify-content: space-between; align-items: center;
+  height: 70px; box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+#conteudo { padding: 20px; }
+.secao { animation: fade 0.25s ease; }
+@keyframes fade { from {opacity:0;} to {opacity:1;} }
+
+/* =====================================================
+                      CARDS CHAMADOS
+===================================================== */
+.grid-chamados { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+
+.card-chamado {
+  background: var(--card); padding: 18px; border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.25); transition: .25s; cursor: pointer;
+  border-left: 4px solid var(--accent); overflow: hidden; position: relative;
+}
+
+.card-chamado:hover { transform: translateY(-3px); box-shadow: 0 0 20px rgba(0,0,0,0.35); }
+
+.btn-abrir {
+  margin-top: 12px; padding: 10px; width: 100%; background: var(--accent);
+  border: none; border-radius: 8px; color: #fff; cursor: pointer; font-weight: 600;
+}
+.btn-abrir:hover { background: #ff5f2d; }
+
+/* BADGE GRAU - FIX overflow */
+.grau {
+  display: inline-block;
+  padding: 3px 10px;
+  font-weight: 700;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  margin-left: 6px;
+  white-space: nowrap;
+  vertical-align: middle;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2) inset;
+}
+
+/* COLORS */
+.grau[data-grau="CRITICO"] { background: #e33838; }
+.grau[data-grau="ALTO"]    { background: #d78400; }
+.grau[data-grau="MEDIO"]   { background: #d4c800; color: #111; }
+.grau[data-grau="BAIXO"]   { background: #1dbf46; }
+
+@media (max-width: 700px) { .grid-chamados { grid-template-columns: 1fr; } }
+
+/* =====================================================
+                      MODAL GERAL
+===================================================== */
+.modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.75); backdrop-filter: blur(4px); padding-top: 40px;
+}
+.modal-content {
+  background: var(--card); margin: auto; padding: 25px; border-radius: 15px; width: 60%; max-width: 900px;
+  color: var(--text); animation: aparecer .22s ease;
+}
+@keyframes aparecer { from { transform: scale(.96); opacity: 0 } to { transform: scale(1); opacity:1 } }
+.fechar { float: right; font-size: 26px; cursor: pointer; padding: 6px 10px; }
+
+/* mapa */
+#frameMapa { width: 100%; height: 350px; border: 0; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.4); }
+@media (max-width:700px) { .modal-content { width: 92%; } #frameMapa { height:260px; } }
+
+/* =====================================================
+                  MODAL DE ARQUIVOS
+===================================================== */
+
+.lista-arquivos {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.lista-arquivos li {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   /* centraliza tudo */
+  width: 100%;           /* 🔥 garante que todos os cards tenham o mesmo tamanho */
+  text-align: center;    /* centraliza o nome */
+  gap: 8px;
+}
+
+.btn-arquivos { margin-left: 10px; padding: 6px 12px; border: none; background: var(--accent); color: #fff; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 700; }
+.btn-arquivos:hover { background: #ff6736; }
+.btn-arquivo-abrir { padding: 5px 10px; background: var(--accent); color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+.btn-arquivo-abrir:hover { background: #ff6736; }
+
+/* =====================================================
+                AGENTES — ESTILO CRACHÁ
+===================================================== */
+.agentes-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; gap:12px; }
+.btn-add-agente { padding:10px 16px; background:var(--accent); border:none; border-radius:8px; color:#fff; cursor:pointer; font-weight:700; }
+.btn-add-agente:hover { background:#ff6736; }
+
+.grid-agentes { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+.card-agente {
+  background: var(--card); padding: 12px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.18);
+  display:flex; gap:12px; align-items:center; transition: .2s; overflow:hidden;
+}
+.card-agente:hover { transform: translateY(-3px); }
+
+.agente-foto { width:75px; height:75px; object-fit:cover; border-radius:12px; flex-shrink:0; }
+.agente-info { flex:1; min-width:0; } /* min-width evita overflow de texto */
+
+.status-bolinha { width:12px; height:12px; border-radius:50%; display:inline-block; margin-right:8px; vertical-align:middle; }
+.online { background:#32e432; }
+.ocupado { background:#e6d200; }
+.offline { background:#d12929; }
+
+.btn-agente-detalhes, .btn-agente-remover {
+  padding:6px 10px; border:none; border-radius:6px; cursor:pointer; font-size:13px; margin-right:6px;
+}
+.btn-agente-detalhes { background:#1f7cff; color:#fff; }
+.btn-agente-detalhes:hover { background:#4898ff; }
+.btn-agente-remover { background:#ff3636; color:#fff; }
+.btn-agente-remover:hover { background:#ff5959; }
+
+/* pequenos ajustes pra evitar que conteúdos ultrapassem */
+.card-agente h3, .card-chamado h3 { font-size: 16px; margin-bottom:6px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/* =====================================================
+                MODAIS DE ADICIONAR / EDITAR AGENTE
+===================================================== */
+.form-row { display:flex; gap:12px; align-items:center; }
+.form-col { flex:1; min-width:0; }
+
+.input, input[type="text"], input[type="file"], select {
+  padding:10px; border-radius:8px; border: none; background:#333; color:var(--text); width:100%;
+}
+.light .input, .light input[type="text"], .light input[type="file"], .light select { background:#ddd; color:#111; }
+
+.preview-foto { width:100px; 
+  height:100px; 
+  object-fit:cover; 
+  border-radius:10px; 
+  margin-left: 30px;
+  border:1px solid rgba(255,255,255,0.06); }
+
+/* =====================================================
+                CONFIGURAÇÕES NOVO LAYOUT
+===================================================== */
+.icon-config-titulo { width:28px; margin-right:6px; vertical-align:middle; }
+/* Aba Config corrigida */
+.config-wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.config-box input,
+.config-box {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.config-box select,
+.campo-fixo {
+  width: 100%;
+  background: #333;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 15px;
+  box-sizing: border-box; /* 🔥 garante 100% sem estourar */
+}
+
+.config-subtitulo { margin-bottom:10px; font-size:18px; font-weight:700; border-bottom:1px solid #444; padding-bottom:5px; }
+
+.config-box input, .config-box select, .campo-fixo { background:#333; padding:14px; border:none; border-radius:8px; color:var(--text); font-size:15px; }
+.campo-fixo { opacity:.9; }
+.light .config-box input, .light .config-box select, .light .campo-fixo { background:#ddd !important; color:#111 !important; }
+
+.btn-salvar { padding:14px; background:var(--accent); color:#fff; border:none; border-radius:8px; cursor:pointer; font-size:15px; margin-top:20px; }
+.btn-salvar.full { width:96%; margin-left:2%; padding:18px; font-size:17px; }
+.btn-salvar:hover { background:#ff6736; }
+
+/* =====================================================
+                        RESPONSIVIDADE
+===================================================== */
+@media (max-width: 1100px) {
+  .grid-chamados { grid-template-columns: 1fr; }
+  .main-content { margin-left: 70px; }
+}
+@media (max-width: 700px) {
+  .grid-agentes { grid-template-columns: 1fr; }
+  .topbar { padding: 12px; }
+  #conteudo { padding: 12px; }
+}
+
+@media (max-width: 700px) {
+  .config-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SIDEBAR EMPURRANDO O CONTEÚDO — MOBILE + DESKTOP */
+.sidebar {
+  width: 220px;
+  transition: width .3s ease;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* Conteúdo sempre empurra */
+.main-content {
+  margin-left: 220px;
+  transition: margin-left .3s ease;
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 70px;
+}
+
+/* Estilo universal do input file */
+input[type="file"] {
+  padding: 10px;
+  background: #333;
+  color: var(--text);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Modo claro */
+.light input[type="file"] {
+  background: #ddd;
+  color: #111;
+}
+
+/* Remover aparência padrão do botão */
+input[type="file"]::-webkit-file-upload-button {
+  background: var(--accent);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: #ff6736;
+}
+
+/* Firefox */
+input[type="file"]::file-selector-button {
+  background: var(--accent);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #ff6736;
+}
+
+/* Corrige input file dentro dos modais de agente */
+#addFoto,
+#editFoto {
+  width: auto !important;
+  max-width: 150px !important; /* tamanho perfeito */
+}
+
+/* Deixar botão cancelar igual ao salvar nos modais */
+.modal .btn-agente-remover {
+  padding: 14px !important;
+  font-size: 15px !important;
+  border-radius: 8px !important;
+}
+
+/* Ajuste fino da posição da foto no modal editar */
+#editFotoPreview {
+  margin-left: 30px; /* PUXA A FOTO PRA ESQUERDA */
+}
+
+#addFotoPreview {
+  margin-left: 30px;
+}

@@ -1,0 +1,416 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Fontes/Montserrat-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Mont-font {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+
+body {
+  background-color: #f7f6f6;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+
+
+ul {
+  list-style-type: none;
+  padding-left: 0;  /* remove indentação padrão */
+}
+
+#realizar_solicitacao{
+  margin-left: 50px;
+}
+
+
+/*============== Reveal ==============*/
+
+.titulo-1 {
+  visibility: hidden;
+}
+
+/*============== Footer ==============*/
+
+.footer {
+  width: 100%;
+  background-color: #e75220;
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #fa8888;
+}
+
+.footer hr {
+  border: 0.5px solid #ffffff;
+  margin: 20px 0;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.ps-5 {
+  padding-left: 3rem;
+}
+
+/*============== Botões ==============*/
+
+.button-nav {
+  background-color: #e75220 !important;
+  color: white !important;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  transition: backgorund 0.3s ease;
+  box-shadow: 0 6px 12px -2px rgba(0,0,0,0.2)
+}
+
+.button-nav:hover {
+  background: linear-gradient(to right, #fe7c37, #fd5825);
+}
+
+.button {
+  border: none;
+  border-radius: 6px;
+  transition: transform 0.3s ease
+}
+
+.button:active {
+  transform: scale(1);
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:active {
+  transform: scale(1);
+}
+
+.button-fil {
+  padding: 13px;
+  width: 200px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #aa101d;
+  box-shadow: 0 6px 12px -2px rgba(0,0,0,0.2)
+}
+
+.button-emp {
+  padding: 11px;
+  border: solid  2px #ff2032;
+  color: #ff2032;
+  font-size: 18px;
+  background: none;
+  transition: background-color 0.5s ease , transform 0.4s ease;
+  box-shadow: 0 6px 12px -2px rgba(0,0,0,0.2)
+}
+
+.button-emp:hover {
+  padding: 11px;
+  background-color: #D84315;
+  color: #f7f6f6 ;
+  font-weight: bold;
+}
+
+/*============== Barra de Navegação==============*/
+nav {
+    padding: 0.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-shadow: 0 6px 12px -2px rgba(0,0,0,0.2) !important;
+}
+
+.a-1 {
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+  color: #e75220  !important;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.a-1::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e75220; 
+  transition: width 0.3s ease-in-out;
+}
+
+.a-1:hover {
+  color: #ec5e5e;
+  text-decoration: none;
+}
+
+.a-1:hover::after {
+  width: 100%;
+}
+
+.ativo {
+  color: black !important;
+}
+
+.ativo::after {
+  width: 100%;
+  background: black; 
+}
+
+/*============== Destaque ==============*/
+
+.img-dest{
+  width: 100%;
+  height: 700px;
+   background: 
+    linear-gradient( rgba(226, 99, 30, 0.3), rgba(235, 137, 107, 0.2)), 
+    url('Imagens/imgem_dest.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  color: #ffffff; /* texto escuro para fundo claro */
+ 
+}
+
+.destaque p {
+  font-size: 20px;
+  width: 50%;
+}
+
+.destaque h1 {
+  font-size: 50px;
+}
+
+.destaque {
+  padding: 5%;
+  width: 100%;
+  padding-top: 6%;
+  text-shadow: 2px 2px 3px black;
+}
+
+/*============== Seção : como funciona ==============*/
+
+.titulo {
+  padding: 40px;
+}
+
+.titulo h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.titulo p {
+  font-size: 17px;
+}
+
+.passo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 40%;
+  text-align: justify;
+  margin: 20px;
+}
+
+.passos {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;
+  flex-wrap: wrap; /* permite quebrar linha se precisar */
+  gap: 60px;
+}
+
+.icone {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #e75220;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.desc h2 {
+  font-size: 25px;
+}
+
+.desc p {
+  font-size: 15px;
+  color: #555;
+}
+
+.titulo h1 {
+  font-weight: 700;
+}
+
+.titulo p {
+  font-size: 18px;
+  color: #555;
+}
+
+/*============== Seção : Tipos de denuncia ==============*/
+
+.tipos-denuncia {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.card-risk {
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+  width: 80%;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.risco-eminente {
+  background: linear-gradient(135deg, #ff4433, #ff7a59);
+}
+
+.risco-progressivo {
+  background: linear-gradient(135deg, #ffd260, #f7e860);
+  color: #333;
+}
+
+.alert-text {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.titulo-risk {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.video-section {
+  width: 100%;
+  background-color: #e0e0e0; /* cor de fundo se o vídeo não carregar */
+  margin-top: 60px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/*============== Responsividade ==============*/
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(40%);
+}
+
+@media (max-width: 991px) {
+  nav ul {
+    gap: 0 !important;
+    text-align: center;
+  }
+
+  nav .nav-item {
+    padding: 8px 0;
+  }
+
+  .button-nav {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .img-dest {
+    height: auto;
+    min-height: 60vh;
+    background-attachment: scroll; /* corrige parallax bug */
+  }
+
+  .destaque h1 {
+    font-size: 32px;
+  }
+  .destaque p {
+    width: 90%;
+  }
+  .tipos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .passo , .passos{
+    width: 90%;
+  }
+  }
+
+@media (max-width: 576px) {
+  .titulo h1 {
+    font-size: 28px;
+  }
+  .titulo p {
+    font-size: 16px;
+  }
+
+  #realizar_solicitacao{
+    margin-left: 0px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  
+}

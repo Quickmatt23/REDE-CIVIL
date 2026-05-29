@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Página solicitacao</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilo_solicitacao.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="reveal.js" defer></script>
+        <link rel="icon" type="image/png" href="Imagens/logo.png">
+    </head>
+  <body>
+    <main>
+       <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
+            <div class="container-fluid px-4">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="Imagens/Logo DC.png" style="width: 80px;" alt="logo da defesa civil">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- ITENS DO MENU -->
+                <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+                    <ul class="navbar-nav align-items-lg-center" style="gap: 20px;">
+
+                        <li class="nav-item">
+                            <a class="nav-link a-1 desativado" href="index.html">Início</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link a-1 desativado" href="sobre.html">Sobre</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link a-1 desativado" href="riscos.html">Saiba sobre os riscos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="solicitacao.html">
+                                <button class="button button-nav ms-lg-3 mt-3 mt-lg-0">
+                                    Realizar solicitação
+                                </button>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <section>
+                
+                <div class="img-dest">
+
+                    <div class="solicitacao d-flex align-items-center">
+                        <div class="etapas" >
+
+                            <h1>Etapas</h1>
+
+                            <div class="etapa" id="etapa1" >
+                                <i class="bi bi-1-square num-etapa"></i>
+                            </div>
+                            <div class="etapa" id="etapa2">
+                                <i class="bi bi-2-square num-etapa"></i>
+                            </div>
+                            <div class="etapa" id="etapa3">
+                                <i class="bi bi-3-square num-etapa"></i>
+                            </div>
+                            <div class="etapa" id="etapa4">
+                                <i class="bi bi-4-square num-etapa"></i>
+                            </div>
+                            
+                        </div>
+                        
+                            <div id="conteudo-etapa1" class="cont conteudo" >
+
+                                <h1> 1 - Tipo de solicitação</h1>
+
+                                <div class="lista-opcoes" id="opcoes">
+                                    <div class="opcao" onclick="mostrarQuestionario('deslizamento')">Deslizamento de terra ou barranco</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('alagamento')">Enchente, inundação ou alagamento</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('queda-arvore')">Queda/risco de árvore</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('desabamento')">Desabamento ou risco de desabamento</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('rachadura')">Rachadura grande em construção</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('vendaval')">Vendaval ou tempestade forte</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('raio')">Queda de raio/risco elétrico</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('incendio')">Incêndio em área de vegetação</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('produto-perigoso')">Produtos perigosos/vazamento</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('saude')">Infestação, epidemia ou risco à saúde</div>
+                                    <div class="opcao" onclick="mostrarQuestionario('outro')">Outro tipo de solicitação</div>
+                                </div>
+
+                                    
+                                <hr>
+
+                                <div id="deslizamento" class="questionario">
+                                    <h4>Deslizamento de terra ou barranco</h4>
+                                    <hr>
+                                    <label >O deslizamento <b>já ocorreu </b>ou <b>está acontecendo</b> agora?<br>
+                                    <input type="radio"  class="form-check-input" name="r1"> já ocorreu
+                                    <input type="radio"  class="form-check-input" name="r1"> está acontecendo
+                                    <input type="radio"  class="form-check-input" name="r1"> Não ocorreu , apenas rachaduras
+                                    <input type="radio"  class="form-check-input" name="r1"> não sei
+                                    </label>
+                                    <hr>
+                                    <label>Há risco para <b>pessoas, casas ou estradas</b> próximas?</b>?<br>
+                                    <input type="radio" class="form-check-input" name="r2"> Sim , já foram atingidas
+                                    <input type="radio" class="form-check-input" name="r2"> Sim, há risco eminente
+                                    <input type="radio" class="form-check-input" name="r2"> Não , está distante das pessoas/estruturas
+                                    </label>
+                                    <hr>
+                                    <label>Novas <b>rachaduras ou movimentações</b> estão surgindo?<br>
+                                    <input type="radio" class="form-check-input" name="r3"> Sim , aumentaram recentemente
+                                    <input type="radio" class="form-check-input" name="r3"> Sim mas permanecem iguais
+                                    <input type="radio" class="form-check-input" name="r3"> Não , permanece estável
+                                    <input type="radio" class="form-check-input" name="r3"> Não sei informar 
+                                    </label>
+                                    <hr>
+                                    <label>Qual a <b>largura aproximada</b> da rachadura?<br>
+                                    <input type="radio" class="form-check-input" name="r4"> Fina (como um fio de cabelo)
+                                    <input type="radio" class="form-check-input" name="r4"> Média (até 5 mm)
+                                    <input type="radio" class="form-check-input" name="r4"> Grossa (acima de 5 mm)
+                                    </label>
+                                </div>
+
+                                <hr>
+
+                                <div class="botoes d-flex gap-4">
+                                    <button class="button button-fil" onclick="proximaEtapa(1)"> <a href="#ancora" style="text-decoration: none; color: white;">Avançar</a></button>
+                                </div>
+        
+                            </div>
+
+                            <div id="conteudo-etapa2" style="display: none;" class="cont ">
+
+                                <h1> 2 - Dados Pessoais</h1>
+                                <p style="color: rgb(34, 34, 34 , 0.8);">Seus dados são utilizados apenas para contato sobre esta solicitação e não serão compartilhados.</p>
+                                <hr>
+
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="switch1">
+                                    <label class="form-check-label ps-2" for="switch1">Não informar dados pessoais</label>
+                                </div>
+
+                                <div class="dados-pessoais">
+
+                                    <div class="inpute">
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="floatingNome" placeholder="#" style="border: 1px solid #000000;">
+                                            <label for="floatingInput">Nome Completo</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="inpute">
+                                        <div class="form-floating ">
+                                            <input type="email" class="form-control" id="floatingEmail" placeholder="exemplo@email.com" style="border: 1px solid #000000;">
+                                            <label for="emailInput">E-mail</label>
+
+                                            <span style="color: rgba(34, 34, 34, 0.8);">
+                                            Você poderá acompanhar sua denúncia por meio deste e-mail
+                                        </div>
+                                    </div>
+                                        
+                                    <div class="inpute">
+                                        <div class="form-floating mb-3">
+                                            <input type="tel" class="form-control" id="floatingTel" placeholder="(00) 00000-0000" style="border: 1px solid #000000;">
+                                            <label for="telefoneInput">Telefone</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <hr>
+                                <div class="botoes d-flex gap-4">
+                                     <a href="#ancora" class="voltar"><button class="button button-emp" onclick="voltarEtapa(2)">Voltar</button></a>
+                                    <button class="button button-fil" onclick="proximaEtapa(2)"> <a href="#ancora" style="text-decoration: none; color: white;">Avançar</a></button>
+                                </div>
+        
+                            </div>
+
+                            <div id="conteudo-etapa3" class="cont" style="display: none;" >
+
+                                <h1> 3 - Local </h1>
+                                <hr>
+                                    <form class="row g-3 p-2">
+                                        <div class="col-md-9">
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" placeholder="#" style="border: 1px solid #000000;">
+                                                <label for="floatingInput">Rua</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" placeholder="#" style="border: 1px solid #000000;">
+                                                <label for="floatingInput">Número</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <form class="row g-3 p-2">
+                                        <div class="col-md-8">
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control"  placeholder="#" style="border: 1px solid #000000;">
+                                                <label for="floatingInput">Bairro</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control"  placeholder="#" style="border: 1px solid #000000;">
+                                                <label for="floatingInput">CEP</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <form class="row g-3 p-2">
+                                        <div class="form-floating mb-3">
+                                                <input class="form-control" placeholder="#" style="border: 1px solid #000000;">
+                                                <label for="floatingInput">Complemento</label>
+                                            </div>
+                                    </form>
+                                    <hr>
+
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" oninput="MostrarMapa()" type="checkbox" id="switch2">
+                                        <label class="form-check-label ps-2" for="switch1"><h5>Utilizar Mapa</h5></label>
+                                    </div>
+
+                                    <div id="mapa" style="width: 100%;">
+                                        
+                                    </div>
+                                <hr>
+
+                                <div class="botoes d-flex gap-4">
+                                    <a href="#ancora" class="voltar"><button class="button button-emp" onclick="voltarEtapa(3)">Voltar</button></a>
+                                    <button class="button button-fil" onclick="proximaEtapa(3)"> <a href="#ancora" style="text-decoration: none; color: white;">Avançar</a></button>
+                                </div>
+        
+                            </div>
+
+                            <div id="conteudo-etapa4" style="display: none;" class="cont" >
+
+                                <h1> 4 - Descrição </h1>
+                                <p style="color: rgb(34, 34, 34 , 0.8);">Explique brevemente a situação observada, incluindo se há pessoas em risco ou danos visíveis.</p>
+                                <hr>
+                                <form class="row g-3 p-2">
+                                    <div class="col-md-12">
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" placeholder="#" style="border: 1px solid #000000; height: 150px; width: 100%;"></textarea>
+                                            <label for="floatingInput">Descreva a solicitação</label>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
+                                <p style="color: rgb(34, 34, 34 , 0.8);">Se possível, envie fotos ou vídeos que ajudem a ilustrar a situação e facilitar o entendimento da ocorrência pela equipe da Defesa Civil.</p>
+                                <form action="">
+                                    <div class="upload-area">
+                                    <input type="file" id="fileInput" accept="image/*,video/*" multiple hidden>
+                                        <label for="fileInput" class="upload-label d-flex align-items-center gap-3">
+                                            <i class="bi bi-upload" style="font-size: 30px;"></i>
+                                            <span>Inserir Arquivos</span>
+                                        </label>
+                                    </div>
+                                </form>
+
+                                <hr>
+
+                                <div class="botoes d-flex gap-4">
+                                    <a href="#ancora" class="voltar" ><button class="button button-emp" onclick="voltarEtapa(4)"> Voltar</button></a>
+                                    <button class="button button-fil" onclick="Finalizar() ; proximaEtapa(4)"> <a href="#ancora" style="text-decoration: none; color: white;">Finalizar</a></button>
+                                </div>
+        
+                            </div>
+
+                            <div id="mensagem" class="cont" style="display:none;">
+
+                                <i class="bi bi-check-circle-fill" style="font-size:60px; color:#2b995b;"></i>
+                                <h2 class="mt-3">Solicitação enviada com sucesso!</h2>
+                                <p>Obrigado por colaborar com a Defesa Civil.<br>
+                                Sua participação ajuda a manter nossa cidade mais segura.</p>
+                                <button class="button button-mensagem"><a href="index.html" style="text-decoration: none; color: white;">Voltar ao Inicio </a></button>
+
+                            </div>
+
+                        </div>                        
+
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+            
+            <!-- Sobre -->
+                <div class="footer-section">
+                    <h3><strong>Defesa Civil Municipal</strong></h3>
+                    <p>
+                    Prefeitura de Pará de Minas – Secretaria de Segurança Pública
+                    </p>
+                </div>
+
+                <!-- Contato -->
+                <div class="footer-section ps-5">
+                    <h3>Contato</h3>
+                    <p>Rua Sidmar Almeida Mendonça, nº 10, Belvedere / 35661-612 - Pará de Minas</p>
+                    <p>(37) 3233-5600 - Ramal 2901 </p>
+                    <p>coord.compdec@parademinas.mg.gov.br</p>
+                </div>
+
+                <!-- Redes Sociais -->
+                <div class="footer-section">
+                    <h3>Siga-nos</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/defesacivil_mg/" class="zoom"><i class="bi bi-instagram fs-2"></i></a>
+                    </div>
+                </div>
+
+                </div>
+
+                <hr>
+
+                <p>© 2025 Defesa Civil . Todos os direitos reservados.</p>
+            </div>
+    </footer>
+    
+
+    <!-- JS -->
+
+		 <script>
+
+             //=============\ Desabilitar input /=============\\
+           let switch1 = document.getElementById("switch1");
+           
+
+            switch1.addEventListener("change", function() {
+                const campos = document.querySelectorAll(
+                "#floatingEmail, #floatingNome"
+                );
+
+                campos.forEach(campo => {
+                campo.disabled = switch1.checked;
+                
+                });
+            });
+
+            function MostrarMapa(){
+
+                let switch2 = document.getElementById("switch2");
+
+                if(switch2.checked){
+                    document.getElementById("mapa").innerHTML = 
+                    `
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73096.42088659157!2d-44.638842205766394!3d-19.859258069500633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa73e81163b914d%3A0x62d82242b7229322!2sPar%C3%A1%20de%20Minas%2C%20MG!5e1!3m2!1spt-BR!2sbr!4v1762883750081!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="250" 
+                        style="border:0;"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+
+                    </iframe>
+                    `
+                }else {
+                    document.getElementById("mapa").innerHTML = ""
+                }
+            }
+
+            
+
+            //=============\  Voltar e Avançar Etapas /=============\\
+
+            function Finalizar() {
+                // Oculta os formulários de etapas
+                document.querySelectorAll('.cont').forEach(e => e.style.display = "none");
+                // Mostra a mensagem de sucesso centralizada ao lado das etapas
+                document.getElementById('mensagem').style.display = "block";
+            }
+
+
+            document.getElementById("etapa1").classList.add("ativa");
+	
+			function proximaEtapa(etapaAtual) {
+
+				document.getElementById('etapa' + etapaAtual).classList.add("concluida");
+				document.getElementById('etapa' + (etapaAtual + 1)).classList.add("ativa");
+
+                document.getElementById('conteudo-etapa' + etapaAtual).style.display = 'none';
+				document.getElementById('conteudo-etapa' + (etapaAtual + 1)).style.display = 'block';
+
+               
+				
+			}
+			
+			function voltarEtapa(etapaAtual) {
+                
+                document.getElementById('etapa' + etapaAtual).classList.remove("ativa");
+                document.getElementById('etapa' + (etapaAtual - 1)).classList.remove("concluida");
+                document.getElementById('etapa' + (etapaAtual - 1)).classList.add("ativa");
+
+                document.getElementById('conteudo-etapa' + etapaAtual).style.display = 'none';
+                document.getElementById('conteudo-etapa' + (etapaAtual - 1)).style.display = 'block';
+            }
+
+
+			
+		
+		 </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

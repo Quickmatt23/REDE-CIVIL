@@ -1,0 +1,386 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Fontes/Montserrat-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Mont-font {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+
+body {
+  background-color: #f7f6f6;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+
+
+ul {
+  list-style-type: none;
+  padding-left: 0;  /* remove indentação padrão */
+}
+
+
+/*============== Reveal ==============*/
+
+.titulo-1 {
+  visibility: hidden;
+}
+
+/*============== Footer ==============*/
+
+.footer {
+  width: 100%;
+  background-color: #e75220;
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #fa8888;
+}
+
+.footer hr {
+  border: 0.5px solid #ffffff;
+  margin: 20px 0;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.ps-5 {
+  padding-left: 3rem;
+}
+
+/*============== Botões ==============*/
+
+.button-nav {
+  background-color: #e75220 !important;
+  color: white !important;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  transition: backgorund 0.3s ease;
+  box-shadow: 0 6px 12px -2px rgba(0,0,0,0.2)
+}
+
+.button-nav:hover {
+  background: linear-gradient(to right, #fe7c37, #fd5825);
+}
+
+.button {
+  border: none;
+  border-radius: 6px;
+  transition: transform 0.3s ease
+}
+
+.button:active {
+  transform: scale(1);
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:active {
+  transform: scale(1);
+}
+
+.button-fil {
+  padding: 13px;
+  width: 200px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #aa101d;
+  box-shadow: 0 6px 12px -2px rgba(0,0,0,0.2)
+}
+
+.button-emp {
+  padding: 11px;
+  border: solid  2px #ff2032;
+  color: #ff2032;
+  font-size: 18px;
+  background: none;
+  transition: background-color 0.5s ease , transform 0.4s ease;
+  box-shadow: 0 6px 12px -2px rgba(0,0,0,0.2)
+}
+
+.button-emp:hover {
+  padding: 11px;
+  background-color: #D84315;
+  color: #f7f6f6 ;
+  font-weight: bold;
+}
+
+/*============== Barra de Navegação==============*/
+nav {
+    padding: 0.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-shadow: 0 6px 12px -2px rgba(0,0,0,0.2) !important;
+}
+
+.a-1 {
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+  color: #e75220  !important;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.a-1::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e75220; 
+  transition: width 0.3s ease-in-out;
+}
+
+.a-1:hover {
+  color: #ec5e5e;
+  text-decoration: none;
+}
+
+.a-1:hover::after {
+  width: 100%;
+}
+
+.ativo {
+  color: black !important;
+}
+
+.ativo::after {
+  width: 100%;
+  background: black; 
+}
+
+/* ==========================
+   Banner destaque
+========================== */
+.img-dest {
+  background-image: url('Imagens/fundo.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 430px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  color: #fff;
+}
+
+.destaque h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.destaque p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 2px 2px 3px #000;
+}
+
+/* ==========================
+   Barra de busca
+========================== */
+.busca {
+  padding: 40px 0;
+}
+
+.busca input {
+  width: 35%;
+  height: 45px;
+  border: 2px solid #222;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 0 12px;
+  transition: 0.3s ease;
+}
+
+.busca input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* ==========================
+   Seção Riscos
+========================== */
+.riscos {
+  padding: 4% 2%;
+}
+
+.categoria h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.categoria p {
+  font-size: 18px;
+  color: rgba(34,34,34,0.8);
+}
+
+.sub-categoria h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #aa101d;
+}
+
+.sub-categoria p {
+  font-size: 17px;
+  color: rgba(34,34,34,0.8);
+}
+
+/* ==========================
+   Cards dos riscos
+========================== */
+.card {
+  border-radius: 14px;
+  border: none;
+  background: #fff;
+  padding: 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-title {
+  color: #aa101d;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.card-subtitle {
+  font-size: 15px;
+  color: rgba(34,34,34,0.75);
+}
+
+.card ul li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.bi {
+  font-size: 10px;
+  color: #aa101d;
+}
+
+/* ==========================
+   Footer
+========================== */
+.footer {
+  background-color: #e75220;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.social-links a {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #ffd2c2;
+}
+
+.footer hr {
+  border-color: rgba(255,255,255,0.5);
+  margin: 20px 0;
+}
+
+/* ==========================
+   Responsividade
+========================== */
+@media (max-width: 991px) {
+  nav ul { text-align: center; }
+  .button-nav { width: 100%; }
+  .busca input { width: 75%; }
+}
+
+@media (max-width: 600px) {
+  .destaque h1 { font-size: 30px; }
+  .destaque p { font-size: 16px; }
+  .categoria h1 { font-size: 28px; }
+}

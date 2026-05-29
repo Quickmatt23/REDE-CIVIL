@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página De Riscos</title>
+    <link rel="stylesheet" href="estilo_riscos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="reveal.js" defer></script>
+    <link rel="icon" type="image/png" href="Imagens/logo.png">
+</head>
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
+            <div class="container-fluid px-4">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="Imagens/Logo DC.png" style="width: 80px;" alt="logo da defesa civil">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- ITENS DO MENU -->
+                <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+                    <ul class="navbar-nav align-items-lg-center" style="gap: 20px;">
+
+                        <li class="nav-item">
+                            <a class="nav-link a-1 desativado" href="index.html">Início</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link a-1 desativado" href="sobre.html">Sobre</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link a-1 ativo" href="riscos.html">Saiba sobre os riscos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="solicitacao.html">
+                                <button class="button button-nav ms-lg-3 mt-3 mt-lg-0">
+                                    Realizar solicitação
+                                </button>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <header>
+            <div class="img-dest">
+                <div class="destaque">
+                    <h1 class="mb-4">O que é o <b>COBRADE?</b></h1>
+                    <p class="mb-5">
+                        O COBRADE é o sistema usado pela Defesa Civil para padronizar a identificação e o registro de desastres no Brasil.<br>
+                        Ele organiza os eventos em riscos naturais e tecnológicos, cada um com um código próprio para facilitar atendimento, monitoramento e prevenção.<br>
+                        Cada desastre possui um código numérico que representa seu tipo e subcategoria (ex.: 1.1.3.2.1).
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="busca d-flex justify-content-center align-items-center gap-3">
+                <img src="Imagens/pesquisa.png" width="40" height="40">
+                <input type="text" placeholder="Pesquise algum risco específico">
+            </div>
+        </section>
+
+        <section>
+            <div class="riscos container">
+                <div class="categoria text-center mb-4">
+                    <h1>Categoria 1 — Riscos Naturais</h1>
+                    <p>Eventos originados por fenômenos naturais ou interações com o ambiente urbano.</p>
+                </div>
+
+                <hr>
+
+                <div class="sub-categoria mb-4">
+                    <h2>Geológicos</h2>
+                    <p>Desastres geológicos envolvem movimentação do solo, rochas e encostas, geralmente agravados por chuvas ou ocupações irregulares.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Deslizamento de terra (1.1.3.2.1)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Movimento rápido de terra ou rocha descendo uma encosta.</h6>
+                            <p class="card-text">Sinais comuns:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Rachaduras no solo</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Árvores e postes inclinados</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Estalos no terreno</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Deformações repentinas</li>
+                            </ul>
+                            <p>Podem destruir casas, bloquear vias e causar soterramentos.</p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Subsidências (1.1.3.4.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Afundamento do solo, perda de sustentação ou colapso subterrâneo.</h6>
+                            <p class="card-text">Pode causar:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Rachaduras em casas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Afundamento de calçadas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Instabilidade de muros e vias</li>
+                            </ul>
+                            <p>Exige atenção imediata para evitar colapso estrutural.</p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Queda de blocos / Rolamento / Queda de árvores (1.1.3.1.1)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Movimentos rápidos de materiais naturais como rochas, solo e árvores</h6>
+                            <p class="card-text"> Caracterizado por:
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Queda de árvores com risco a vias, casas ou rede elétrica</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Queda ou rolamento de blocos de rocha</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Desprendimentos súbitos de encostas naturais</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Movimentos bruscos devido à saturação do solo ou erosão</li>
+                            </ul>
+                            <p> Geralmente ocorre após:
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Chuvas intensas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Ventos fortes</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Erosão</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Instabilidade natural do terreno</li>
+                            </ul></p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <br>
+    
+
+
+                <div class="sub-categoria mb-4">
+                    <h2>Hidrológicos</h2>
+                    <p>Relativos ao comportamento da água na superfície ou no subsolo. São frequentes em períodos chuvosos e áreas urbanizadas.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Enchente / Inundação (1.2.1.0.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Transbordamento de Rios</h6>
+                            <p class="card-text">Quando rios transbordam e inundam áreas que normalmente ficam secas.
+                            São fenômenos lentos, mas muito destrutivos.
+                            </p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Alagamento Urbano (1.2.3.0.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">água em vias urbanas </h6>
+                            <p class="card-text">Acúmulo de água em vias urbanas por falhas de drenagem, entupimento de bueiros ou declividade inadequada.
+                            É rápido, porém geralmente menos destrutivo que inundações fluviais.
+                            </p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Enxurradas ( 1.2.2.0.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Fluxo de água extremamente veloz e destrutivo em regiões inclinadas.</h6>
+                           <p class="card-text">Podem:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Arrastar carros</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Destruir muros</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Causar soterramentos</li>
+                            </ul>
+                            <p>São um dos eventos hidrológicos mais perigosos.</p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="sub-categoria mb-4">
+                    <h2>Meteorológicos</h2>
+                    <p>Eventos relacionados ao tempo atmosférico e ao comportamento de massas de ar.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Vendaval ou tempestade forte ( 1.3.2.1.5)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Ventos anormais muito fortes</h6>
+                            <p class="card-text">Ventos intensos que podem:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Destelhar casas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Derrubar árvores</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Afetar redes elétricas.</li>
+                            </ul>
+                            <p>Normalmente associados a mudanças bruscas de pressão ou tempestades convectivas.</p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Queda de raio / Risco elétrico (1.3.2.1.2)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Tempestades elétricas intensas </h6>
+                            <p class="card-text">Tempestades que podem causar:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Incêndios</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Danos estruturais</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Quedas de energia</li>
+                            </ul>
+                            <p>Normalmente associados a mudanças bruscas de pressão ou tempestades convectivas.</p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Chuvas intensas (1.3.2.1.4)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Chuvas com grande volume em pouco tempo ou de longa duração.</h6>
+                           <p class="card-text">Trazem riscos:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>De deslizamento</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Enchente</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Enxurradas,</li>
+                            </ul>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="sub-categoria mb-4">
+                    <h2>Climatológicos</h2>
+                    <p>Relacionados às condições climáticas prolongadas.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Incêndio em vegetação (1.4.1.3.1 e 1.4.1.3.2)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Fogo sem controle em áreas com vegetação natural ou urbana.</h6>
+                            <p class="card-text">Causas típicas:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Estiagem prolongada</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Ação humana</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Queda de raio</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Queimadas Agrícolas</li>
+                            </ul>
+                             <p class="card-text">Impactos:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Destruição de ecossistemas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Fumaça tóxica</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Risco a populações próximas.</li>
+                            </ul>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Seca e estiagem ( 1.4.1.1.0 e 1.4.1.2.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Períodos sem chuva </h6>
+                            <p class="card-text">Afetam:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Abastecimento de água</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Agricultura</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Reservatórios</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Qualidade do ar.</li>
+                            </ul>
+                            <p>Normalmente associados a mudanças bruscas de pressão ou tempestades convectivas.</p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="sub-categoria mb-4">
+                    <h2>Biológicos</h2>
+                    <p>Eventos envolvendo vetores, agentes infecciosos ou desequilíbrio ambiental.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Infestação (1.5.2.1.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Aumento de pragas urbanas (ratos, escorpiões, insetos)</h6>
+                            <p class="card-text"> geralmente causado por lixo, entulho ou desequilíbrio natural.</p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Epidemias (1.5.1.1.0 a 1.5.1.4.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Aumento abrupto de doenças</h6>
+                            <p class="card-text">Doenças:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Virais (dengue, gripe)</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Bacterianas (por bacterias)</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Fúngicas (por fungos)</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Parasitárias ( por parasitas )</li>
+                            </ul>
+                            <p>Esses eventos podem exigir ações emergenciais coordenadas.</p>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="categoria text-center mb-4">
+                    <h1>Categoria 2 — Riscos Tecnológicos</h1>
+                    <p>Ocorrências causadas por falhas humanas, industriais, mecânicas ou estruturais.</p>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Acidentes com Produtos Perigosos( 2.2.1.1.0, 2.2.4.1.0 a 2.2.4.6.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Eventos envolvendo substâncias químicas, inflamáveis, tóxicas, corrosivas ou radioativas.</h6>
+                            <p class="card-text">Inclui::</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Vazamentos de caminhões-tanque</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Rompimento de tubulações de gás</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Acidentes industriais com produtos químicos</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Contaminação de rios, solo ou ar</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Explosões ou incêndios causados por materiais perigosos</li>
+                            </ul>
+                             <p class="card-text">Isto expoem a riscos de:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Intoxicação</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Queimaduras</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Contaminação ambiental</li>
+                            </ul>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Desabamento ou Risco Estrutural(2.4.1.0.0 e 2.4.2.0.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Falhas ou colapso de estruturas civis. </h6>
+                            <p class="card-text">Inclui::</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Colapso ou risco de queda de edificações</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Ruptura de pontes e passarelas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Falhas em barragens ou reservatórios</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Erosão que compromete bases estruturais</li>
+                            </ul>
+                            <p class="card-text">Possíveis causas:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Falta de manutenção</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Sobrecarga</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Vibrações</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Obras mal executadas</li>
+
+                            </ul>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Falhas Mecânicas, Elétricas ou Industriais (2.4.0.0.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Ocorrências envolvendo falhas em sistemas, equipamentos ou estruturas dependentes de operação humana. </h6>
+                            <p class="card-text">Inclui:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Curto-circuitos e incêndios elétricos urbanos</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Rompimento de cabos, postes ou transformadores</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Falhas em máquinas industriais</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Acidentes em linhas de produção</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Mau funcionamento de sistemas automatizados</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Vibrações anômalas em estruturas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Ruídos ou impactos industriais inesperados</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Incidentes Tecnológicos Diversos(2.5.0.0.0)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">eventos tecnológicos específicos que não se enquadram diretamente nas falhas mecânicas</h6>
+                            <p class="card-text">Inclui::</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Vibrações anômalas em estruturas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Ruídos ou impactos industriais inesperados</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Mau funcionamento de sistemas automatizados</li>
+                            </ul>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="categoria text-center mb-4">
+                    <h1>Categoria 3 — Eventos Especiais e Atípicos (Outros Tipos de Ocorrência)</h1>
+                    <p>eventos raros, pouco frequentes ou que não se enquadram nos grupos tradicionais de riscos naturais, tecnológicos ou ambientais.</p>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Fenômenos Geofísicos Raros</h5>
+                            <p class="card-text">Inclui:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Terremotos (1.1.1.1.0)</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Tsunamis (1.1.1.2.0)</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Tremores localizados</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Microtremores urbanos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Eventos Mistos (Híbridos)</h5>
+                            <p class="card-text">Inclui:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Enchente que causa rompimento de tubulações</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Deslizamento que danifica postes ou redes elétricas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Vendaval que provoca explosões industriais</li>
+                            </ul>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+                
+                <div class="col-md-6">
+                        <div class="card shadow-sm h-100 p-3">
+                            <h5 class="card-title">Ocorrências Não Classificadas</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Casos excepcionais ou novas tipologias.</h6>
+                            <p class="card-text">Inclui:</p>
+                            <ul>
+                                <li><i class="bi bi-circle-fill me-2"></i>Fenômenos atmosféricos atípicos</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Vibrações misteriosas</li>
+                                <li><i class="bi bi-circle-fill me-2"></i>Eventos emergentes ainda sem classificação oficial</li>
+                            </ul>
+                            <a href="cobrade_deslizamento.html" class="btn btn-outline-danger w-100 mt-2">
+                                Saiba mais
+                            </a>
+                        </div>
+                    </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><strong>Defesa Civil Municipal</strong></h3>
+                    <p>Prefeitura de Pará de Minas – Secretaria de Segurança Pública</p>
+                </div>
+
+                <div class="footer-section ps-5">
+                    <h3>Contato</h3>
+                    <p>Rua Sidmar Almeida Mendonça, nº 10, Belvedere / Pará de Minas</p>
+                    <p>(37) 3233-5600 - Ramal 2901</p>
+                    <p>coord.compdec@parademinas.mg.gov.br</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Siga-nos</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/defesacivil_mg/" class="zoom"><i class="bi bi-instagram fs-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <p>© 2025 Defesa Civil. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

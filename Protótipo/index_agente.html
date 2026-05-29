@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Interno - Defesa Civil</title>
+
+  <link rel="stylesheet" href="style_agente.css" />
+  <script defer src="agent.js"></script>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">
+      <img src="icones_agente/escudo.png" class="logo-img" />
+    </div>
+
+    <nav class="menu-lateral">
+      <ul>
+        <li>
+          <a href="#" class="ativo" data-section="chamados">
+            <img src="icones_agente/enviar.png" class="icon-menu" />
+            <span>Chamados</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" data-section="agentes">
+            <img src="icones_agente/agente.png" class="icon-menu" />
+            <span>Agentes</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" data-section="config">
+            <img src="icones_agente/confg.png" class="icon-menu" />
+            <span>Configurações</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button id="toggleSidebar" class="btn-toggle">
+      <img src="icones_agente/seta.png" class="img-seta" />
+    </button>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+    <header class="topbar">
+      <h2 id="tituloPagina">Painel Interno</h2>
+
+      <div class="status-online">
+        <img src="icones_agente/on.png" class="botao-status" />
+        <span>Online</span>
+      </div>
+    </header>
+
+    <div id="conteudo">
+
+      <!-- ===================== CHAMADOS ===================== -->
+      <div class="secao" id="secao-chamados">
+
+        <div class="grid-chamados">
+
+          <div class="card-chamado" onclick="abrirChamado(1)">
+            <h3>Árvore Caída</h3>
+            <p><strong>Local:</strong> Rua Padre Libério — Centro</p>
+            <p><strong>Grau:</strong> <span class="grau" data-grau="CRITICO">CRÍTICO</span></p>
+            <button class="btn-abrir">Ampliar</button>
+          </div>
+
+          <div class="card-chamado" onclick="abrirChamado(2)">
+            <h3>Rachadura em Residência</h3>
+            <p><strong>Local:</strong> Rua Benedito Valadares — Recanto da Lagoa</p>
+            <p><strong>Grau:</strong> <span class="grau" data-grau="ALTO">ALTO</span></p>
+            <button class="btn-abrir">Ampliar</button>
+          </div>
+
+          <div class="card-chamado" onclick="abrirChamado(3)">
+            <h3>Enxurrada</h3>
+            <p><strong>Local:</strong> Av. Presidente Vargas — Centro</p>
+            <p><strong>Grau:</strong> <span class="grau" data-grau="MEDIO">MÉDIO</span></p>
+            <button class="btn-abrir">Ampliar</button>
+          </div>
+
+          <div class="card-chamado" onclick="abrirChamado(4)">
+            <h3>Fiação Rompida</h3>
+            <p><strong>Local:</strong> Rua São Geraldo — Dom Bosco</p>
+            <p><strong>Grau:</strong> <span class="grau" data-grau="CRITICO">CRÍTICO</span></p>
+            <button class="btn-abrir">Ampliar</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===================== AGENTES ===================== -->
+      <div class="secao" id="secao-agentes" style="display:none;">
+        <div class="agentes-header">
+          <h2>Agentes</h2>
+          <button class="btn-add-agente" onclick="abrirAdicionarAgente()">+ Adicionar Agente</button>
+        </div>
+
+        <div class="grid-agentes" id="gridAgentes"></div>
+      </div>
+
+      <!-- ===================== MODAL DO CHAMADO ===================== -->
+      <div id="modalChamado" class="modal">
+        <div class="modal-content">
+          <span class="fechar" onclick="fecharChamado()">&times;</span>
+
+          <h2 id="modalTitulo">Chamado</h2>
+
+          <div class="dados-chamado">
+
+            <p><strong>Nome:</strong> <span id="cNome">—</span></p>
+            <p><strong>E-mail:</strong> <span id="cEmail">—</span></p>
+            <p><strong>Telefone:</strong> <span id="cTelefone">—</span></p>
+
+            <p><strong>Rua:</strong> <span id="cRua">—</span></p>
+            <p><strong>Número:</strong> <span id="cNumero">—</span></p>
+            <p><strong>Bairro:</strong> <span id="cBairro">—</span></p>
+            <p><strong>CEP:</strong> <span id="cCep">—</span></p>
+            <p><strong>Complemento:</strong> <span id="cComplemento">—</span></p>
+
+            <p><strong>Descrição:</strong> <span id="cDescricao">—</span></p>
+
+            <p>
+              <strong>Arquivos:</strong>
+              <span id="cArquivos"></span>
+              <button class="btn-arquivos" onclick="abrirArquivos()">Ver arquivos</button>
+            </p>
+
+            <p><strong>Grau:</strong> <span class="grau" id="cGrau"></span></p>
+
+          </div>
+
+          <div class="mapa-container">
+            <h3>Localização</h3>
+            <iframe id="frameMapa" width="100%" height="350" loading="lazy"
+                style="border:0; border-radius: 10px;"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== CONFIG ===================== -->
+<div class="secao" id="secao-config" style="display:none;">
+  <h2>Configurações</h2>
+
+  <div class="config-wrapper">
+
+    <!-- BOX: TEMA -->
+    <div class="config-box">
+      <h3 class="config-subtitulo">
+        <img src="icones_agente/tema.png" class="icon-config-titulo icon-config-tema">
+        Tema do Sistema
+      </h3>
+
+      <label for="selectTema">Modo de cor:</label>
+      <select id="selectTema" class="input">
+        <option value="auto">Automático</option>
+        <option value="light">Claro</option>
+        <option value="dark">Escuro</option>
+      </select>
+    </div>
+
+    <!-- BOX: USUÁRIO -->
+    <div class="config-box">
+      <h3 class="config-subtitulo">
+        <img src="icones_agente/usuario_config.png" class="icon-config-titulo icon-config-usuario">
+        Usuário
+      </h3>
+
+      <label>Nome:</label>
+      <input class="campo-fixo" value="Agente Ativo" disabled>
+
+      <label>Status:</label>
+      <input class="campo-fixo" value="Online" disabled>
+    </div>
+
+    <!-- BOX: SISTEMA -->
+    <div class="config-box">
+      <h3 class="config-subtitulo">
+        <img src="icones_agente/sistema.png" class="icon-config-titulo icon-config-sistema">
+        Sistema
+      </h3>
+
+      <label>Versão:</label>
+      <input class="campo-fixo" value="v1.0.3 Estável" disabled>
+
+      <label>Atualização:</label>
+      <input class="campo-fixo" value="25/11/2025 — 22:00" disabled>
+    </div>
+
+  </div>
+
+  <button id="btnSalvarConfig" class="btn-salvar full">Salvar Configurações</button>
+</div>
+
+      <!-- ===================== MODAL DE ARQUIVOS ===================== -->
+      <div id="modalArquivos" class="modal">
+        <div class="modal-content">
+          <span class="fechar" onclick="fecharArquivos()">&times;</span>
+          <h3>Arquivos Anexados</h3>
+          <ul id="listaArquivos" class="lista-arquivos"></ul>
+        </div>
+      </div>
+
+    </div> <!-- Fim do conteúdo -->
+  </main>
+
+</body>
+</html>

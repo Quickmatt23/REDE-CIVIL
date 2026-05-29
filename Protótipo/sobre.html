@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sobre - Defesa Civil</title>
+    <link rel="stylesheet" href="estilo_index.css">
+    <link rel="stylesheet" href="estilo_sobre.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="reveal_sobre.js" defer></script>
+    
+  </head>
+
+  <body>
+    <main>
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
+          <div class="container-fluid px-4">
+
+              <a class="navbar-brand" href="index.html">
+                  <img src="Imagens/Logo DC.png" style="width: 80px;" alt="logo da defesa civil">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- ITENS DO MENU -->
+              <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+                  <ul class="navbar-nav align-items-lg-center" style="gap: 20px;">
+
+                     <li class="nav-item">
+                            <a class="nav-link a-1 desativado" href="index.html">Início</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link a-1 ativo" href="sobre.html">Sobre</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link a-1 desativado" href="riscos.html">Saiba sobre os riscos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="solicitacao.html">
+                                <button class="button button-nav ms-lg-3 mt-3 mt-lg-0">
+                                    Realizar solicitação
+                                </button>
+                            </a>
+                        </li>
+
+                  </ul>
+              </div>
+
+            </div>
+      </nav>
+
+      <!-- SEÇÃO DESTAQUE -->
+      <section class="banner-sobre d-flex align-items-center justify-content-center text-center">
+        <div class="img_destaque_sobre">
+          <h1>Sobre a Plataforma de Denúncias</h1>
+          <p>Conheça o sistema desenvolvido no Projeto Integrador, criado para fortalecer a comunicação entre a população e a Defesa Civil.</p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO EXPLICAÇÃO -->
+      <section class="container mt-5 mb-5">
+        <div class="titulo titulo-1 text-center">
+          <h1>O que é o Sistema de Denúncias?</h1>
+          <p>O sistema permite que o cidadão registre e acompanhe situações de risco de forma rápida e segura, contribuindo para uma resposta mais eficiente da Defesa Civil.</p>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+
+          <div class="col-md-5 passo passo1">
+            <div class="icone" style="background-image: url('Imagens/finalidade.png');"></div>
+            <div class="desc ms-3">
+              <h2>Finalidade</h2>
+              <p>Facilitar o registro e o acompanhamento de denúncias, garantindo transparência, agilidade e eficiência no atendimento das ocorrências.</p>
+            </div>
+          </div>
+
+          <div class="col-md-5 mb-4 passo passo2">
+            <div class="icone" style="background-image: url('Imagens/funcionamento.png');"></div>
+            <div class="desc ms-3">
+              <h2>Funcionamento</h2>
+              <p>Após o envio, a denúncia recebe um número de protocolo para acompanhamento. A equipe avalia o nível de urgência e direciona o atendimento adequado.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO INSTITUCIONAL -->
+      <section class="container mt-5 mb-5">
+        <div class="titulo titulo-2 text-center">
+          <h1>Sobre a Defesa Civil Municipal</h1>
+          <p>A Defesa Civil atua na prevenção, resposta e reconstrução em situações de risco e desastres, promovendo segurança e bem-estar à população.</p>
+        </div>
+
+        <div class="passos-flex">
+          <div class="passo">
+            <div class="icone" style="background-image: url('Imagens/missao.png');"></div>
+              <div class="desc mt-3">
+                <h2>Missão</h2>
+                <p>Atuar na prevenção e redução de desastres, protegendo vidas, o patrimônio público e o meio ambiente.</p>
+              </div>
+          </div>
+          <div class="passo">
+            <div class="icone" style="background-image: url('Imagens/visao.png');"></div>
+              <div class="desc mt-3">
+                <h2>Visão</h2>
+                <p>Ser referência em gestão de riscos e emergências, com ações integradas e tecnologia acessível ao cidadão.</p>
+              </div>
+          </div>
+          <div class="passo">
+            <div class="icone" style="background-image: url('Imagens/equipe.png');"></div>
+              <div class="desc mt-3">
+                <h2>Equipe</h2>
+                <p>Formada por profissionais dedicados à segurança, prevenção e resposta rápida a emergências.</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOVAS SEÇÕES COMPLEMENTARES -->
+      <section class="container mt-5 mb-5 contexto-projeto card">
+        <div class="titulo text-center">
+          <h1>Contexto e Objetivo do Projeto</h1>
+          <p>
+            Esta plataforma foi desenvolvida no âmbito do <strong>Projeto Integrador</strong> do curso de Gestão da Tecnologia da Informação,
+            com o objetivo de aproximar a Defesa Civil Municipal da comunidade por meio da tecnologia.
+            Inspirada na <strong>Lei nº 12.608/2012</strong>, que institui a Política Nacional de Proteção e Defesa Civil,
+            a iniciativa busca facilitar a comunicação de situações de risco, promovendo um ambiente mais seguro e participativo.
+          </p>
+        </div>
+      </section>
+
+      <section class="container mt-5 mb-5 participacao-cidada card">
+        <div class="titulo text-center">
+          <h1>A Importância da Participação Cidadã</h1>
+          <p>
+            A plataforma reflete o princípio de que a <strong>gestão de riscos é também um ato de cidadania</strong>.
+            Conforme autores como <em>Norberto Bobbio</em> e <em>Boaventura de Sousa Santos</em>, a democracia depende da participação ativa da população.
+            Assim, ao registrar uma denúncia, o cidadão torna-se parte do sistema de prevenção,
+            fortalecendo a rede de colaboração entre o poder público e a sociedade.
+          </p>
+        </div>
+      </section>
+
+      <section class="container mt-5 mb-5 tecnologia card">
+        <div class="titulo text-center">
+          <h1>Tecnologia e Inovação</h1>
+          <p>
+            O site foi idealizado com base em conceitos de <strong>governo eletrônico (e-government)</strong>,
+            conforme <em>J. Ramón Gil-García</em>, e na <strong>sociedade em rede</strong> de <em>Manuel Castells</em>.
+            A proposta une tecnologia e gestão pública, garantindo rapidez, acessibilidade e transparência nas ações da Defesa Civil.
+            Cada denúncia é um dado estratégico para a prevenção e resposta eficiente em situações de risco.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3><strong>Defesa Civil Municipal</strong></h3>
+            <p>Prefeitura de Pará de Minas – Secretaria de Segurança Pública</p>
+          </div>
+
+          <div class="footer-section ps-5">
+            <h3>Contato</h3>
+            <p>Rua Sidmar Almeida Mendonça, nº 10, Belvedere / 35661-612 - Pará de Minas</p>
+            <p>(37) 3233-5600 - Ramal 2901</p>
+            <p>coord.compdec@parademinas.mg.gov.br</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Siga-nos</h3>
+            <div class="social-links">
+              <a href="https://www.instagram.com/defesacivil_mg/" class="zoom"><i class="bi bi-instagram fs-2"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <p>© 2025 Defesa Civil . Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
