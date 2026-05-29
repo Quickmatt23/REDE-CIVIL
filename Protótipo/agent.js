@@ -1,6 +1,3 @@
-/* ============================================================
-   agent.js - PACOTE COMPLETO (chamados, agentes, config, arquivos)
-============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.getElementById("sidebar");
@@ -48,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* garantir modais de agentes no DOM (injetar se não existir) */
   ensureAgentModals();
 
   carregarAgentes();
@@ -135,7 +131,7 @@ function abrirArquivos() {
 function fecharArquivos() { document.getElementById("modalArquivos").style.display = "none"; }
 function abrirArquivo(caminho) { window.open(caminho, "_blank"); }
 
-/* fechar modais clicando fora */
+
 window.addEventListener("click", function(e){
   const modCham = document.getElementById("modalChamado");
   const modArq = document.getElementById("modalArquivos");
